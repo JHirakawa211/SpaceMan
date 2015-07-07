@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24DE8B721B4B944300CBD86E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE8B711B4B944300CBD86E /* Game.m */; };
 		24E271581B423E14005E3EE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E271571B423E14005E3EE8 /* main.m */; };
 		24E2715B1B423E14005E3EE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E2715A1B423E14005E3EE8 /* AppDelegate.m */; };
 		24E2715E1B423E14005E3EE8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E2715D1B423E14005E3EE8 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24DE8B701B4B944300CBD86E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		24DE8B711B4B944300CBD86E /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		24E271521B423E14005E3EE8 /* SpaceMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E271561B423E14005E3EE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24E271571B423E14005E3EE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				24E271591B423E14005E3EE8 /* AppDelegate.h */,
 				24E2715A1B423E14005E3EE8 /* AppDelegate.m */,
 				24E2715C1B423E14005E3EE8 /* ViewController.h */,
+				24DE8B701B4B944300CBD86E /* Game.h */,
+				24DE8B711B4B944300CBD86E /* Game.m */,
 				24E2715D1B423E14005E3EE8 /* ViewController.m */,
 				24E2715F1B423E14005E3EE8 /* Main.storyboard */,
 				24E271621B423E14005E3EE8 /* Images.xcassets */,
@@ -222,6 +227,7 @@
 				24E2715E1B423E14005E3EE8 /* ViewController.m in Sources */,
 				24E2715B1B423E14005E3EE8 /* AppDelegate.m in Sources */,
 				24E271581B423E14005E3EE8 /* main.m in Sources */,
+				24DE8B721B4B944300CBD86E /* Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +422,7 @@
 				24E271771B423E14005E3EE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24E271781B423E14005E3EE8 /* Build configuration list for PBXNativeTarget "SpaceManTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				24E2717A1B423E14005E3EE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
