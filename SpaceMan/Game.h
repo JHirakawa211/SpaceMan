@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+int RandomRightAsteroidPosition;
+int RandomLeftAsteroidPosition;
+int RandomTopAsteroidPosition;
+int RandomBottomAsteroidPosition;
+
 @interface Game : UIViewController
 {
     IBOutlet UIButton *StartGame;
@@ -37,9 +42,40 @@
     IBOutlet UIImageView *RightDiagDownDarkBlueAsteroid;
     IBOutlet UIImageView *RightDiagDownPinkAsteroid;
     
+    NSTimer *AsteroidLeftRedMovement;
+    NSTimer *AsteroidLeftGreenMovement;
+    NSTimer *AsteroidBlueMovement;
+    NSTimer *AsteroidRightPinkMovement;
+    NSTimer *AsteroidRightDarkBlueMovement;
+    NSTimer *AsteroidTopRedMovement;
+    NSTimer *AsteroidTopYellowMovement;
+    NSTimer *AsteroidBottomBlueMovement;
+    NSTimer *AsteroidBottomPurpleMovement;
+    NSTimer *AsteroidOrangeMovement;
+    NSTimer *AsteroidPurpleMovement;
+    NSTimer *AsteroidYellowMovement;
+    
     
 }
 
 -(IBAction)StartGame:(id)sender;
+-(void)PlaceAsteroidLeftRed;
+-(void)PlaceAsteroidLeftGreen;
+-(void)PlaceAsteroidRightPink;
+-(void)PlaceAsteroidRightDarkBlue;
+-(void)PlaceAsteroidTopRed;
+-(void)PlaceAsteroidTopYellow;
+-(void)PlaceAsteroidBottomBlue;
+-(void)PlaceAsteroidBottomPurple;
+-(void)AsteroidMovingLeftRed;
+-(void)AsteroidMovingLeftGreen;
+-(void)AsteroidMovingRightPink;
+-(void)AsteroidMovingRightDarkBlue;
+-(void)AsteroidMovingTopRed;
+-(void)AsteroidMovingTopYellow;
+-(void)AsteroidMovingBottomBlue;
+-(void)AsteroidMovingBottomPurple;
+
+
 
 @end

@@ -84,10 +84,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-GY-ppU">
-                                <rect key="frame" x="-16" y="-18" width="342" height="592"/>
+                                <rect key="frame" x="-9" y="-12" width="342" height="592"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="342" id="J9h-Of-BXD"/>
-                                    <constraint firstAttribute="height" constant="592" id="lvb-yt-AYN"/>
+                                    <constraint firstAttribute="height" constant="592" id="Tqq-ig-I3L"/>
+                                    <constraint firstAttribute="width" constant="342" id="ks3-AP-H7j"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidbluediagnolright" translatesAutoresizingMaskIntoConstraints="NO" id="CtL-8v-GTL">
@@ -100,16 +100,16 @@
                                 <rect key="frame" x="72" y="97" width="50" height="50"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidblueup" translatesAutoresizingMaskIntoConstraints="NO" id="DTB-8N-wwX">
-                                <rect key="frame" x="135" y="405" width="50" height="50"/>
+                                <rect key="frame" x="135" y="409" width="34" height="46"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroiddarkblueright" translatesAutoresizingMaskIntoConstraints="NO" id="VLu-Q7-Hzf">
-                                <rect key="frame" x="0.0" y="216" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="241" width="45" height="25"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidgreendowndiag" translatesAutoresizingMaskIntoConstraints="NO" id="WcQ-Cr-tI6">
                                 <rect key="frame" x="254" y="341" width="50" height="50"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidgreenleft" translatesAutoresizingMaskIntoConstraints="NO" id="uQ0-FX-zEU">
-                                <rect key="frame" x="270" y="232" width="50" height="50"/>
+                                <rect key="frame" x="302" y="251" width="50" height="30"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidgreenleftdiagnolmost" translatesAutoresizingMaskIntoConstraints="NO" id="Zj5-mf-dAk">
                                 <rect key="frame" x="62" y="41" width="50" height="50"/>
@@ -129,14 +129,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidpurpledownleft" translatesAutoresizingMaskIntoConstraints="NO" id="JOF-ul-dEJ">
                                 <rect key="frame" x="0.0" y="300" width="50" height="50"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidpurpleup" translatesAutoresizingMaskIntoConstraints="NO" id="ULK-wU-bi9">
-                                <rect key="frame" x="135" y="463" width="50" height="50"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidred" translatesAutoresizingMaskIntoConstraints="NO" id="HUD-cG-Qby">
-                                <rect key="frame" x="217" y="237" width="50" height="50"/>
+                                <rect key="frame" x="217" y="252" width="50" height="35"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidreddown" translatesAutoresizingMaskIntoConstraints="NO" id="NAN-WM-ScN">
-                                <rect key="frame" x="140" y="97" width="50" height="50"/>
+                                <rect key="frame" x="146" y="91" width="32" height="48"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidreddownleft" translatesAutoresizingMaskIntoConstraints="NO" id="6PH-mg-b9O">
                                 <rect key="frame" x="16" y="341" width="50" height="50"/>
@@ -148,10 +145,7 @@
                                 <rect key="frame" x="31" y="444" width="50" height="50"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidpinkright" translatesAutoresizingMaskIntoConstraints="NO" id="YNx-0H-GPV">
-                                <rect key="frame" x="41" y="216" width="50" height="50"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidyellowdown" translatesAutoresizingMaskIntoConstraints="NO" id="sEG-lf-nnR">
-                                <rect key="frame" x="140" y="41" width="50" height="50"/>
+                                <rect key="frame" x="48" y="266" width="53" height="26"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z4-cS-iM1">
                                 <rect key="frame" x="109" y="373" width="92" height="33"/>
@@ -160,6 +154,9 @@
                                     <color key="titleColor" red="1" green="0.1103009259" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="StartGame:" destination="zzG-pm-GJY" eventType="touchUpInside" id="uS7-xe-sfd"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidorangeleftdowndiag" translatesAutoresizingMaskIntoConstraints="NO" id="b7C-dk-D7D">
                                 <rect key="frame" x="31" y="399" width="50" height="50"/>
@@ -170,16 +167,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidpurpleleftdiag" translatesAutoresizingMaskIntoConstraints="NO" id="RId-2P-qDZ">
                                 <rect key="frame" x="42" y="155" width="49" height="47"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="spaceufo" translatesAutoresizingMaskIntoConstraints="NO" id="eCW-m9-KmZ">
-                                <rect key="frame" x="123" y="237" width="64" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidyellowdown" translatesAutoresizingMaskIntoConstraints="NO" id="sEG-lf-nnR">
+                                <rect key="frame" x="146" y="14" width="33" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="spaceufo" translatesAutoresizingMaskIntoConstraints="NO" id="r2O-MJ-uEA">
+                                <rect key="frame" x="142" y="266" width="37" height="36"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidpurpleup" translatesAutoresizingMaskIntoConstraints="NO" id="ULK-wU-bi9">
+                                <rect key="frame" x="135" y="524" width="34" height="50"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="Im1-GY-ppU" secondAttribute="bottom" constant="-6" id="2DC-dB-Sm2"/>
-                            <constraint firstItem="Im1-GY-ppU" firstAttribute="leading" secondItem="uzv-jp-dPT" secondAttribute="leadingMargin" constant="-32" id="38r-Hv-hyD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Im1-GY-ppU" secondAttribute="trailing" constant="-22" id="XMe-qI-hlf"/>
-                            <constraint firstItem="Im1-GY-ppU" firstAttribute="top" secondItem="uzv-jp-dPT" secondAttribute="topMargin" constant="-18" id="cOS-K9-ff8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Im1-GY-ppU" secondAttribute="trailing" constant="-29" id="47O-DC-idy"/>
+                            <constraint firstItem="Im1-GY-ppU" firstAttribute="top" secondItem="uzv-jp-dPT" secondAttribute="topMargin" constant="-12" id="CLL-jo-eeU"/>
+                            <constraint firstItem="Im1-GY-ppU" firstAttribute="leading" secondItem="uzv-jp-dPT" secondAttribute="leadingMargin" constant="-25" id="RL4-Cd-s5i"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Im1-GY-ppU" secondAttribute="bottom" constant="-12" id="yQ7-go-evx"/>
                         </constraints>
                     </view>
                     <connections>
@@ -193,6 +196,7 @@
                         <outlet property="LeftDiagDownRedAsteroid" destination="6PH-mg-b9O" id="BfJ-LD-LiS"/>
                         <outlet property="LeftDiagMostBlueAsteroid" destination="Fxz-cb-TLx" id="6cN-xM-Fpg"/>
                         <outlet property="LeftDiagMostGreenAsteroid" destination="Zj5-mf-dAk" id="qrL-09-tD4"/>
+                        <outlet property="LeftDiagPurpleAsteroid" destination="RId-2P-qDZ" id="TFe-ME-jAW"/>
                         <outlet property="LeftPinkAsteroid" destination="YNx-0H-GPV" id="49H-2d-j29"/>
                         <outlet property="RightDiagBlueAsteroid" destination="CtL-8v-GTL" id="aMz-aT-hDa"/>
                         <outlet property="RightDiagDownDarkBlueAsteroid" destination="Gbc-WB-GNM" id="xjk-1N-wu0"/>
@@ -204,7 +208,8 @@
                         <outlet property="RightDiagYellowAsteroid" destination="0nc-Il-Mev" id="YBG-d4-pt4"/>
                         <outlet property="RightGreenAsteroid" destination="uQ0-FX-zEU" id="PQQ-cn-Abx"/>
                         <outlet property="RightRedAsteroid" destination="HUD-cG-Qby" id="xX3-Bk-U8r"/>
-                        <outlet property="StartGame" destination="2Z4-cS-iM1" id="et0-i8-rDu"/>
+                        <outlet property="SpaceMan" destination="r2O-MJ-uEA" id="lte-Pg-PJR"/>
+                        <outlet property="StartGame" destination="2Z4-cS-iM1" id="ime-tp-Juf"/>
                         <outlet property="TopRedAsteroid" destination="NAN-WM-ScN" id="0GG-8l-xZS"/>
                         <outlet property="TopYellowAsteroid" destination="sEG-lf-nnR" id="Vqt-r4-C1e"/>
                     </connections>
