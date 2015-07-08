@@ -1,36 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spacetitle" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-Jk-9p1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spacetitle" id="rvG-Jk-9p1">
                                 <rect key="frame" x="-16" y="0.0" width="336" height="568"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="568" id="Add-J6-kKb"/>
-                                    <constraint firstAttribute="width" constant="336" id="pRW-rE-YVW"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puh-94-8sH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Puh-94-8sH">
                                 <rect key="frame" x="0.0" y="-8" width="320" height="732"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="732" id="QFA-X4-WcR"/>
-                                    <constraint firstAttribute="width" constant="320" id="QGY-0d-v91"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Tap To Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,117 +28,88 @@
                                     <segue destination="zzG-pm-GJY" kind="modal" id="aRv-rn-YVO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HighScore" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4P-Vc-L5t">
-                                <rect key="frame" x="145" y="452" width="85" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="LcW-wu-vaz"/>
-                                    <constraint firstAttribute="height" constant="21" id="j8A-pP-sKF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HighScore" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p4P-Vc-L5t">
+                                <rect key="frame" x="106" y="452" width="151" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="Puh-94-8sH" secondAttribute="bottom" constant="-156" id="4MG-3v-7T5"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="p4P-Vc-L5t" secondAttribute="bottom" constant="95" id="C6j-2X-fGT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="p4P-Vc-L5t" secondAttribute="trailing" constant="74" id="E19-dq-2aS"/>
-                            <constraint firstItem="Puh-94-8sH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="GyO-ru-REN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Puh-94-8sH" secondAttribute="trailing" constant="-16" id="R5z-Aj-wqv"/>
-                            <constraint firstItem="rvG-Jk-9p1" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Zc7-q8-yEe"/>
-                            <constraint firstItem="p4P-Vc-L5t" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="432" id="epx-DZ-bA6"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="rvG-Jk-9p1" secondAttribute="bottom" id="gtR-Jx-dFB"/>
-                            <constraint firstItem="p4P-Vc-L5t" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="129" id="heO-hR-YYb"/>
-                            <constraint firstItem="rvG-Jk-9p1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-32" id="hys-Z2-aU3"/>
-                            <constraint firstItem="Puh-94-8sH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-8" id="kjL-4L-uiN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rvG-Jk-9p1" secondAttribute="trailing" constant="-16" id="wit-FH-1YT"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="HighScore" destination="p4P-Vc-L5t" id="3Ng-e6-lnA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="352"/>
+            <point key="canvasLocation" x="399" y="346"/>
         </scene>
         <!--Game-->
         <scene sceneID="N7i-mU-Lhi">
             <objects>
                 <viewController id="zzG-pm-GJY" customClass="Game" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="drl-Bv-h5j"/>
-                        <viewControllerLayoutGuide type="bottom" id="osW-cy-VkF"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uzv-jp-dPT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-GY-ppU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space" id="Im1-GY-ppU">
                                 <rect key="frame" x="-9" y="-12" width="342" height="592"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="592" id="Tqq-ig-I3L"/>
-                                    <constraint firstAttribute="width" constant="342" id="ks3-AP-H7j"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidbluediagnolright" translatesAutoresizingMaskIntoConstraints="NO" id="CtL-8v-GTL">
-                                <rect key="frame" x="212" y="133" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidbluediagnolright" id="CtL-8v-GTL">
+                                <rect key="frame" x="321" y="90" width="24" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidbluedowndiag1" translatesAutoresizingMaskIntoConstraints="NO" id="Gbc-WB-GNM">
-                                <rect key="frame" x="209" y="399" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidbluedowndiag1" id="Gbc-WB-GNM">
+                                <rect key="frame" x="253" y="568" width="30" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidblueleftdiagnolmost" translatesAutoresizingMaskIntoConstraints="NO" id="Fxz-cb-TLx">
-                                <rect key="frame" x="72" y="97" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidblueup" id="DTB-8N-wwX">
+                                <rect key="frame" x="95" y="565" width="25" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidblueup" translatesAutoresizingMaskIntoConstraints="NO" id="DTB-8N-wwX">
-                                <rect key="frame" x="135" y="409" width="34" height="46"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroiddarkblueright" id="VLu-Q7-Hzf">
+                                <rect key="frame" x="-40" y="217" width="38" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroiddarkblueright" translatesAutoresizingMaskIntoConstraints="NO" id="VLu-Q7-Hzf">
-                                <rect key="frame" x="0.0" y="241" width="45" height="25"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidgreenleft" id="uQ0-FX-zEU">
+                                <rect key="frame" x="320" y="339" width="42" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidgreendowndiag" translatesAutoresizingMaskIntoConstraints="NO" id="WcQ-Cr-tI6">
-                                <rect key="frame" x="254" y="341" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidgreenleftdiagnolmost" id="Zj5-mf-dAk">
+                                <rect key="frame" x="26" y="-43" width="19" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidgreenleft" translatesAutoresizingMaskIntoConstraints="NO" id="uQ0-FX-zEU">
-                                <rect key="frame" x="302" y="251" width="50" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidorangediagnolmostright" id="kGG-az-YZA">
+                                <rect key="frame" x="319" y="186" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidgreenleftdiagnolmost" translatesAutoresizingMaskIntoConstraints="NO" id="Zj5-mf-dAk">
-                                <rect key="frame" x="62" y="41" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidpinkdowndiag1" id="IUl-oM-ptE">
+                                <rect key="frame" x="263" y="567" width="27" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidorangediagnolmostright" translatesAutoresizingMaskIntoConstraints="NO" id="kGG-az-YZA">
-                                <rect key="frame" x="270" y="150" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidpurpleup" id="ULK-wU-bi9">
+                                <rect key="frame" x="69" y="567" width="25" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidorangedowndiag" translatesAutoresizingMaskIntoConstraints="NO" id="vkY-Be-oVV">
-                                <rect key="frame" x="254" y="386" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidred" id="HUD-cG-Qby">
+                                <rect key="frame" x="318" y="207" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidpinkdiagnolmostright" translatesAutoresizingMaskIntoConstraints="NO" id="g0C-Xn-7UQ">
-                                <rect key="frame" x="254" y="97" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidreddown" id="NAN-WM-ScN">
+                                <rect key="frame" x="216" y="-41" width="23" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidpinkdowndiag1" translatesAutoresizingMaskIntoConstraints="NO" id="IUl-oM-ptE">
-                                <rect key="frame" x="241" y="444" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidpinkright" id="YNx-0H-GPV">
+                                <rect key="frame" x="-41" y="340" width="38" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidpurpledownleft" translatesAutoresizingMaskIntoConstraints="NO" id="JOF-ul-dEJ">
-                                <rect key="frame" x="0.0" y="300" width="50" height="50"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidred" translatesAutoresizingMaskIntoConstraints="NO" id="HUD-cG-Qby">
-                                <rect key="frame" x="217" y="252" width="50" height="35"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidreddown" translatesAutoresizingMaskIntoConstraints="NO" id="NAN-WM-ScN">
-                                <rect key="frame" x="146" y="91" width="32" height="48"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidreddownleft" translatesAutoresizingMaskIntoConstraints="NO" id="6PH-mg-b9O">
-                                <rect key="frame" x="16" y="341" width="50" height="50"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidyellowdiagnolright" translatesAutoresizingMaskIntoConstraints="NO" id="0nc-Il-Mev">
-                                <rect key="frame" x="241" y="52" width="50" height="50"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidyellowdownleft" translatesAutoresizingMaskIntoConstraints="NO" id="PPF-E8-jDY">
-                                <rect key="frame" x="31" y="444" width="50" height="50"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidpinkright" translatesAutoresizingMaskIntoConstraints="NO" id="YNx-0H-GPV">
-                                <rect key="frame" x="48" y="266" width="53" height="26"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z4-cS-iM1">
-                                <rect key="frame" x="109" y="373" width="92" height="33"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2Z4-cS-iM1">
+                                <rect key="frame" x="4" y="43" width="308" height="589"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Start Game">
                                     <color key="titleColor" red="1" green="0.1103009259" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -158,56 +118,65 @@
                                     <action selector="StartGame:" destination="zzG-pm-GJY" eventType="touchUpInside" id="uS7-xe-sfd"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidorangeleftdowndiag" translatesAutoresizingMaskIntoConstraints="NO" id="b7C-dk-D7D">
-                                <rect key="frame" x="31" y="399" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidorangeleftdowndiag" id="b7C-dk-D7D">
+                                <rect key="frame" x="6" y="568" width="35" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroiddarkblueleftdiag" translatesAutoresizingMaskIntoConstraints="NO" id="o6z-o1-Utl">
-                                <rect key="frame" x="8" y="103" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidyellowdown" id="sEG-lf-nnR">
+                                <rect key="frame" x="195" y="-41" width="23" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidpurpleleftdiag" translatesAutoresizingMaskIntoConstraints="NO" id="RId-2P-qDZ">
-                                <rect key="frame" x="42" y="155" width="49" height="47"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spaceufo" id="r2O-MJ-uEA">
+                                <rect key="frame" x="140" y="266" width="37" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidyellowdown" translatesAutoresizingMaskIntoConstraints="NO" id="sEG-lf-nnR">
-                                <rect key="frame" x="146" y="14" width="33" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidyellowdownleft" id="PPF-E8-jDY">
+                                <rect key="frame" x="71" y="567" width="27" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="spaceufo" translatesAutoresizingMaskIntoConstraints="NO" id="r2O-MJ-uEA">
-                                <rect key="frame" x="142" y="266" width="37" height="36"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidpurpleleftdiag" id="RId-2P-qDZ">
+                                <rect key="frame" x="-7" y="-28" width="24" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="asteroidpurpleup" translatesAutoresizingMaskIntoConstraints="NO" id="ULK-wU-bi9">
-                                <rect key="frame" x="135" y="524" width="34" height="50"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Dgi-7Y-cqH">
+                                <rect key="frame" x="-9" y="0.0" width="334" height="617"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" red="1" green="1" blue="0.021180555555555557" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="yDS-4q-ac4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FZ4-c6-JAV">
+                                <rect key="frame" x="132" y="5" width="139" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Im1-GY-ppU" secondAttribute="trailing" constant="-29" id="47O-DC-idy"/>
-                            <constraint firstItem="Im1-GY-ppU" firstAttribute="top" secondItem="uzv-jp-dPT" secondAttribute="topMargin" constant="-12" id="CLL-jo-eeU"/>
-                            <constraint firstItem="Im1-GY-ppU" firstAttribute="leading" secondItem="uzv-jp-dPT" secondAttribute="leadingMargin" constant="-25" id="RL4-Cd-s5i"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Im1-GY-ppU" secondAttribute="bottom" constant="-12" id="yQ7-go-evx"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="BottomBlueAsteroid" destination="DTB-8N-wwX" id="xT5-dc-9Oc"/>
                         <outlet property="BottomPurpleAsteroid" destination="ULK-wU-bi9" id="FJs-DG-0ME"/>
+                        <outlet property="Exit" destination="Dgi-7Y-cqH" id="A6F-dq-fZo"/>
                         <outlet property="LeftDarkBlueAsteroid" destination="VLu-Q7-Hzf" id="Coy-J1-UEx"/>
-                        <outlet property="LeftDiagDarkBlueAsteroid" destination="o6z-o1-Utl" id="VzF-W2-9jW"/>
                         <outlet property="LeftDiagDownMostOrangeAsteroid" destination="b7C-dk-D7D" id="Q3h-yw-hCr"/>
                         <outlet property="LeftDiagDownMostYellowAsteroid" destination="PPF-E8-jDY" id="DhE-vT-h0c"/>
-                        <outlet property="LeftDiagDownPurpleAsteroid" destination="JOF-ul-dEJ" id="oVX-KU-zNN"/>
-                        <outlet property="LeftDiagDownRedAsteroid" destination="6PH-mg-b9O" id="BfJ-LD-LiS"/>
-                        <outlet property="LeftDiagMostBlueAsteroid" destination="Fxz-cb-TLx" id="6cN-xM-Fpg"/>
                         <outlet property="LeftDiagMostGreenAsteroid" destination="Zj5-mf-dAk" id="qrL-09-tD4"/>
                         <outlet property="LeftDiagPurpleAsteroid" destination="RId-2P-qDZ" id="TFe-ME-jAW"/>
                         <outlet property="LeftPinkAsteroid" destination="YNx-0H-GPV" id="49H-2d-j29"/>
                         <outlet property="RightDiagBlueAsteroid" destination="CtL-8v-GTL" id="aMz-aT-hDa"/>
                         <outlet property="RightDiagDownDarkBlueAsteroid" destination="Gbc-WB-GNM" id="xjk-1N-wu0"/>
-                        <outlet property="RightDiagDownMostGreenAsteroid" destination="WcQ-Cr-tI6" id="54Z-O1-WHl"/>
-                        <outlet property="RightDiagDownMostOrangeAsteroid" destination="vkY-Be-oVV" id="kqV-GP-5T1"/>
                         <outlet property="RightDiagDownPinkAsteroid" destination="IUl-oM-ptE" id="Mc0-TK-a7J"/>
                         <outlet property="RightDiagMostOrangeAsteroid" destination="kGG-az-YZA" id="CYS-0J-pLg"/>
-                        <outlet property="RightDiagMostPinkAsteroid" destination="g0C-Xn-7UQ" id="Fh4-MM-Djl"/>
-                        <outlet property="RightDiagYellowAsteroid" destination="0nc-Il-Mev" id="YBG-d4-pt4"/>
                         <outlet property="RightGreenAsteroid" destination="uQ0-FX-zEU" id="PQQ-cn-Abx"/>
                         <outlet property="RightRedAsteroid" destination="HUD-cG-Qby" id="xX3-Bk-U8r"/>
+                        <outlet property="ScoreLabel" destination="FZ4-c6-JAV" id="J2p-4I-xn4"/>
                         <outlet property="SpaceMan" destination="r2O-MJ-uEA" id="lte-Pg-PJR"/>
                         <outlet property="StartGame" destination="2Z4-cS-iM1" id="ime-tp-Juf"/>
                         <outlet property="TopRedAsteroid" destination="NAN-WM-ScN" id="0GG-8l-xZS"/>
@@ -216,32 +185,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VkN-r6-zRe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580" y="352"/>
+            <point key="canvasLocation" x="795" y="361"/>
         </scene>
     </scenes>
     <resources>
         <image name="asteroidbluediagnolright" width="687" height="486"/>
         <image name="asteroidbluedowndiag1" width="606" height="592"/>
-        <image name="asteroidblueleftdiagnolmost" width="450" height="724"/>
         <image name="asteroidblueup" width="404" height="741"/>
-        <image name="asteroiddarkblueleftdiag" width="650" height="547"/>
         <image name="asteroiddarkblueright" width="725" height="440"/>
-        <image name="asteroidgreendowndiag" width="483" height="690"/>
         <image name="asteroidgreenleft" width="741" height="412"/>
         <image name="asteroidgreenleftdiagnolmost" width="450" height="724"/>
         <image name="asteroidorangediagnolmostright" width="593" height="606"/>
-        <image name="asteroidorangedowndiag" width="483" height="690"/>
         <image name="asteroidorangeleftdowndiag" width="630" height="561"/>
-        <image name="asteroidpinkdiagnolmostright" width="593" height="606"/>
         <image name="asteroidpinkdowndiag1" width="606" height="592"/>
         <image name="asteroidpinkright" width="725" height="440"/>
-        <image name="asteroidpurpledownleft" width="692" height="482"/>
         <image name="asteroidpurpleleftdiag" width="650" height="547"/>
         <image name="asteroidpurpleup" width="404" height="741"/>
         <image name="asteroidred" width="741" height="412"/>
         <image name="asteroidreddown" width="388" height="739"/>
-        <image name="asteroidreddownleft" width="692" height="482"/>
-        <image name="asteroidyellowdiagnolright" width="687" height="486"/>
         <image name="asteroidyellowdown" width="388" height="739"/>
         <image name="asteroidyellowdownleft" width="593" height="606"/>
         <image name="space" width="732" height="892"/>

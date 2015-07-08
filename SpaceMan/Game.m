@@ -14,53 +14,83 @@
 
 @implementation Game
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    UITouch *TouchSpaceMan = [touches anyObject];
+    
+    startPoint = [TouchSpaceMan locationInView:self.view];
+    
+    SpaceMan.center = CGPointMake(startPoint.x, startPoint.y);
+    
+}
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+}
+
+-(void)Score{
+    ScoreNumber = ScoreNumber + 1;
+    ScoreLabel.text = [NSString stringWithFormat:@"Score:%i",ScoreNumber];
+}
+
 -(IBAction)StartGame:(id)sender{
     RightRedAsteroid.hidden = NO;
     RightGreenAsteroid.hidden = NO;
-    //RightDiagBlueAsteroid.hidden = NO;
-   // RightDiagYellowAsteroid.hidden = NO;
-   // RightDiagMostPinkAsteroid.hidden = NO;
-   // RightDiagMostOrangeAsteroid.hidden = NO;
+    RightDiagBlueAsteroid.hidden = NO;
+    RightDiagMostOrangeAsteroid.hidden = NO;
     TopRedAsteroid.hidden = NO;
     TopYellowAsteroid.hidden = NO;
-    //LeftDiagMostGreenAsteroid.hidden = NO;
-   // LeftDiagMostBlueAsteroid.hidden = NO;
-  //  LeftDiagPurpleAsteroid.hidden = NO;
-  //  LeftDiagDarkBlueAsteroid.hidden = NO;
+    LeftDiagMostGreenAsteroid.hidden = NO;
+    LeftDiagPurpleAsteroid.hidden = NO;
     LeftPinkAsteroid.hidden = NO;
     LeftDarkBlueAsteroid.hidden = NO;
-   // LeftDiagDownPurpleAsteroid.hidden = NO;
-   // LeftDiagDownRedAsteroid.hidden = NO;
-   // LeftDiagDownMostYellowAsteroid.hidden = NO;
-   // LeftDiagDownMostOrangeAsteroid.hidden = NO;
+    //LeftDiagDownMostYellowAsteroid.hidden = NO;
     BottomBlueAsteroid.hidden = NO;
     BottomPurpleAsteroid.hidden = NO;
-   // RightDiagDownMostOrangeAsteroid.hidden = NO;
-   // RightDiagDownMostGreenAsteroid.hidden = NO;
-   // RightDiagDownDarkBlueAsteroid.hidden = NO;
-   // RightDiagDownPinkAsteroid.hidden = NO;
+    //RightDiagDownDarkBlueAsteroid.hidden = NO;
     
     StartGame.hidden = YES;
     
     [self PlaceAsteroidLeftRed];
     [self PlaceAsteroidLeftGreen];
     
+    ScoreTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(Score) userInfo:nil repeats:YES];
     
-    AsteroidLeftRedMovement = [NSTimer scheduledTimerWithTimeInterval:0.003 target:self selector:@selector(AsteroidMovingLeftRed) userInfo:nil repeats:YES];
+    AsteroidLeftRedMovement = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(AsteroidMovingLeftRed) userInfo:nil repeats:YES];
     
-    AsteroidLeftGreenMovement = [NSTimer scheduledTimerWithTimeInterval:0.002 target:self selector:@selector(AsteroidMovingLeftGreen) userInfo:nil repeats:YES];
+    AsteroidLeftGreenMovement = [NSTimer scheduledTimerWithTimeInterval:0.004 target:self selector:@selector(AsteroidMovingLeftGreen) userInfo:nil repeats:YES];
     
-    AsteroidRightPinkMovement = [NSTimer scheduledTimerWithTimeInterval:0.008 target:self selector:@selector(AsteroidMovingRightPink) userInfo:nil repeats:YES];
+    AsteroidRightPinkMovement = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(AsteroidMovingRightPink) userInfo:nil repeats:YES];
     
     AsteroidRightDarkBlueMovement = [NSTimer scheduledTimerWithTimeInterval:0.003 target:self selector:@selector(AsteroidMovingRightDarkBlue) userInfo:nil repeats:YES];
     
-    AsteroidTopRedMovement= [NSTimer scheduledTimerWithTimeInterval:0.003 target:self selector:@selector(AsteroidMovingTopRed) userInfo:nil repeats:YES];
+    AsteroidTopRedMovement= [NSTimer scheduledTimerWithTimeInterval:0.004 target:self selector:@selector(AsteroidMovingTopRed) userInfo:nil repeats:YES];
     
-    AsteroidTopYellowMovement = [NSTimer scheduledTimerWithTimeInterval:0.006 target:self selector:@selector(AsteroidMovingTopYellow) userInfo:nil repeats:YES];
+    AsteroidTopYellowMovement = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(AsteroidMovingTopYellow) userInfo:nil repeats:YES];
     
-    AsteroidBottomBlueMovement = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(AsteroidMovingBottomBlue) userInfo:nil repeats:YES];
+    AsteroidBottomBlueMovement = [NSTimer scheduledTimerWithTimeInterval:0.003 target:self selector:@selector(AsteroidMovingBottomBlue) userInfo:nil repeats:YES];
     
-    AsteroidBottomPurpleMovement = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(AsteroidMovingBottomPurple) userInfo:nil repeats:YES];
+    AsteroidBottomPurpleMovement = [NSTimer scheduledTimerWithTimeInterval:0.004 target:self selector:@selector(AsteroidMovingBottomPurple) userInfo:nil repeats:YES];
+    
+    AsteroidRightDiagOrangeMovement = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(AsteroidMovingRightDiagOrange) userInfo:nil repeats:YES];
+    
+    AsteroidRightDiagBlueMovement = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(AsteroidMovingRightDiagBlue) userInfo:nil repeats:YES];
+    
+    AsteroidLeftDiagGreenMovement = [NSTimer scheduledTimerWithTimeInterval:0.004 target:self selector:@selector(AsteroidMovingLeftDiagGreen) userInfo:nil repeats:YES];
+    
+    AsteroidLeftDiagPurpleMovement = [NSTimer scheduledTimerWithTimeInterval:0.002 target:self selector:@selector(AsteroidMovingLeftDiagPurple) userInfo:nil repeats:YES];
+    
+     /*AsteroidLeftDiagDownOrangeMovement = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(AsteroidMovingLeftDiagDownOrange) userInfo:nil repeats:YES];*/
+    
+    /* AsteroidLeftDiagDownYellowMovement = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(AsteroidMovingLeftDiagDownYellow) userInfo:nil repeats:YES];
+    
+     AsteroidRightDiagDownDarkBlueMovement = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(AsteroidMovingRightDiagDownDarkBlue) userInfo:nil repeats:YES];
+    
+      AsteroidRightDiagDownPinkMovement = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(AsteroidMovingRightDiagDownPink) userInfo:nil repeats:YES];*/
+
 
 }
 -(void)PlaceAsteroidLeftRed{
@@ -124,6 +154,67 @@
     
     BottomPurpleAsteroid.center = CGPointMake(RandomBottomAsteroidPosition, 600);
 }
+-(void)PlaceAsteroidRightDiagOrange{
+    
+    RandomRightDiagAsteroidPosition = arc4random() %600;
+    RandomRightDiagAsteroidPosition = RandomRightDiagAsteroidPosition + 200;
+    
+    RightDiagMostOrangeAsteroid.center = CGPointMake(RandomRightDiagAsteroidPosition, -50);
+}
+-(void)PlaceAsteroidRightDiagBlue{
+    
+    RandomRightDiagAsteroidPosition = arc4random() %600;
+    RandomRightDiagAsteroidPosition = RandomRightDiagAsteroidPosition + 250;
+    
+    RightDiagBlueAsteroid.center = CGPointMake(RandomRightDiagAsteroidPosition, -50);
+}
+-(void)PlaceAsteroidLeftDiagGreen{
+    
+    RandomLeftDiagAsteroidPosition = arc4random() %600;
+    RandomLeftDiagAsteroidPosition = RandomLeftDiagAsteroidPosition - 200;
+    
+    LeftDiagMostGreenAsteroid.center = CGPointMake(RandomLeftDiagAsteroidPosition, -50);
+}
+-(void)PlaceAsteroidLeftDiagPurple{
+    
+    RandomLeftDiagAsteroidPosition = arc4random() %600;
+    RandomLeftDiagAsteroidPosition = RandomLeftDiagAsteroidPosition -300;
+    
+    LeftDiagPurpleAsteroid.center = CGPointMake(RandomLeftDiagAsteroidPosition, -50);
+
+}
+-(void)PlaceAsteroidLeftDiagDownYellow{
+    
+    RandomleftDiagDownAsteroidPosition = arc4random() %600;
+    RandomleftDiagDownAsteroidPosition = RandomleftDiagDownAsteroidPosition -200;
+    
+    LeftDiagDownMostYellowAsteroid.center = CGPointMake(-50, RandomleftDiagDownAsteroidPosition);
+    
+}
+/*-(void)PlaceAsteroidLeftDiagDownOrange{
+    
+    RandomleftDiagDownAsteroidPosition = arc4random() %600;
+    RandomleftDiagDownAsteroidPosition = RandomleftDiagDownAsteroidPosition -200;
+    
+    LeftDiagDownMostOrangeAsteroid.center = CGPointMake(RandomleftDiagDownAsteroidPosition, -50);
+    
+}
+-(void)PlaceAsteroidRightDiagDownPink{
+    
+    RandomRightDiagDownAsteroidPosition = arc4random() %600;
+    RandomRightDiagDownAsteroidPosition = RandomleftDiagDownAsteroidPosition -200;
+    
+    RightDiagDownPinkAsteroid.center = CGPointMake(RandomRightDiagDownAsteroidPosition, -50);
+    
+}*/
+-(void)PlaceAsteroidRightDiagDownDarkBlue{
+    
+    RandomRightDiagDownAsteroidPosition = arc4random() %600;
+    RandomRightDiagDownAsteroidPosition = RandomleftDiagDownAsteroidPosition -200;
+    
+    RightDiagDownDarkBlueAsteroid.center = CGPointMake(RandomRightDiagDownAsteroidPosition, -50);
+    
+}
 
 -(void)AsteroidMovingLeftRed{
     
@@ -131,6 +222,10 @@
     
     if(RightRedAsteroid.center.x < -28){
         [self PlaceAsteroidLeftRed];
+    }
+    
+    if(CGRectIntersectsRect(SpaceMan.frame, RightRedAsteroid.frame)){
+        [self GameOver];
     }
 }
 -(void)AsteroidMovingLeftGreen{
@@ -140,6 +235,10 @@
     if(RightGreenAsteroid.center.x < -28){
         [self PlaceAsteroidLeftGreen];
     }
+
+    if(CGRectIntersectsRect(SpaceMan.frame, RightGreenAsteroid.frame)){
+        [self GameOver];
+    }
 }
 -(void)AsteroidMovingRightPink{
     
@@ -148,7 +247,10 @@
     if(LeftPinkAsteroid.center.x > 500){
         [self PlaceAsteroidRightPink];
     }
-    
+
+    if(CGRectIntersectsRect(SpaceMan.frame, LeftPinkAsteroid.frame)){
+        [self GameOver];
+    }
 }
 -(void)AsteroidMovingRightDarkBlue{
     
@@ -156,6 +258,10 @@
     
     if(LeftDarkBlueAsteroid.center.x>500){
         [self PlaceAsteroidRightDarkBlue];
+    }
+   
+    if(CGRectIntersectsRect(SpaceMan.frame, LeftDarkBlueAsteroid.frame)){
+        [self GameOver];
     }
 }
 -(void)AsteroidMovingTopRed{
@@ -165,6 +271,10 @@
     if(TopRedAsteroid.center.y > 720){
         [self PlaceAsteroidTopRed];
     }
+
+    if(CGRectIntersectsRect(SpaceMan.frame, TopRedAsteroid.frame)){
+        [self GameOver];
+    }
 }
 -(void)AsteroidMovingTopYellow{
     
@@ -172,6 +282,10 @@
     
     if(TopYellowAsteroid.center.y > 720){
         [self PlaceAsteroidTopYellow];
+    }
+
+    if(CGRectIntersectsRect(SpaceMan.frame, TopYellowAsteroid.frame)){
+        [self GameOver];
     }
 }
 -(void)AsteroidMovingBottomBlue{
@@ -181,6 +295,9 @@
     if(BottomBlueAsteroid.center.y < -60){
         [self PlaceAsteroidBottomBlue];
     }
+    if(CGRectIntersectsRect(SpaceMan.frame, BottomBlueAsteroid.frame)){
+        [self GameOver];
+    }
 }
 -(void)AsteroidMovingBottomPurple{
     
@@ -189,34 +306,132 @@
     if(BottomPurpleAsteroid.center.y < -60){
         [self PlaceAsteroidBottomPurple];
     }
-}
 
-- (void)viewDidLoad {
+    if(CGRectIntersectsRect(SpaceMan.frame, BottomPurpleAsteroid.frame)){
+        [self GameOver];
+    }
+}
+-(void)AsteroidMovingRightDiagOrange{
+    
+    RightDiagMostOrangeAsteroid.center = CGPointMake(RightDiagMostOrangeAsteroid.center.x-1, RightDiagMostOrangeAsteroid.center.y+1);
+    
+    if(RightDiagMostOrangeAsteroid.center.y > 720){
+        [self PlaceAsteroidRightDiagOrange];
+    }
+
+    if(CGRectIntersectsRect(SpaceMan.frame, RightDiagMostOrangeAsteroid.frame)){
+        [self GameOver];
+    }
+}
+-(void)AsteroidMovingRightDiagBlue{
+    
+    RightDiagBlueAsteroid.center = CGPointMake(RightDiagBlueAsteroid.center.x-1, RightDiagBlueAsteroid.center.y+1);
+    
+    if(RightDiagBlueAsteroid.center.y > 720){
+        [self PlaceAsteroidRightDiagBlue];
+    }
+
+    if(CGRectIntersectsRect(SpaceMan.frame, RightDiagBlueAsteroid.frame)){
+        [self GameOver];
+    }
+}
+-(void)AsteroidMovingLeftDiagGreen{
+    
+    LeftDiagMostGreenAsteroid.center = CGPointMake(LeftDiagMostGreenAsteroid.center.x+1, LeftDiagMostGreenAsteroid.center.y+2);
+    
+    if(LeftDiagMostGreenAsteroid.center.y > 720){
+        [self PlaceAsteroidLeftDiagGreen];
+    }
+
+    if(CGRectIntersectsRect(SpaceMan.frame, LeftDiagMostGreenAsteroid.frame)){
+        [self GameOver];
+    }
+}
+-(void)AsteroidMovingLeftDiagPurple{
+    
+    LeftDiagPurpleAsteroid.center = CGPointMake(LeftDiagPurpleAsteroid.center.x+1, LeftDiagPurpleAsteroid.center.y+1);
+    
+    if(LeftDiagPurpleAsteroid.center.y > 720){
+        [self PlaceAsteroidLeftDiagPurple];
+    }
+   
+    if(CGRectIntersectsRect(SpaceMan.frame, LeftDiagPurpleAsteroid.frame)){
+        [self GameOver];
+    }
+}
+/*-(void)AsteroidMovingLeftDiagDownYellow{
+    
+    LeftDiagDownMostYellowAsteroid.center = CGPointMake(LeftDiagDownMostYellowAsteroid.center.x+1, LeftDiagDownMostYellowAsteroid.center.y-1);
+    
+    if(LeftDiagDownMostYellowAsteroid.center.y < -30){
+        [self PlaceAsteroidLeftDiagDownYellow];
+    }
+    
+}
+-(void)AsteroidMovingRightDiagDownDarkBlue{
+    
+}*/
+-(void)GameOver{
+    
+    if(ScoreNumber > HighScoreNumber){
+        HighScoreNumber = ScoreNumber;
+        [[NSUserDefaults standardUserDefaults]setInteger:ScoreNumber forKey:@"HighScoreSaved"];
+    }
+    [AsteroidBlueMovement invalidate];
+    [AsteroidBottomBlueMovement invalidate];
+    [AsteroidBottomPurpleMovement invalidate];
+    [AsteroidLeftDiagGreenMovement invalidate];
+    [AsteroidLeftDiagPurpleMovement invalidate];
+    [AsteroidLeftGreenMovement invalidate];
+    [AsteroidLeftRedMovement invalidate];
+    [AsteroidRightDarkBlueMovement invalidate];
+    [AsteroidRightDiagBlueMovement invalidate];
+    [AsteroidRightDiagOrangeMovement invalidate];
+    [AsteroidRightPinkMovement invalidate];
+    [AsteroidTopRedMovement invalidate];
+    [AsteroidTopYellowMovement invalidate];
+    [ScoreTimer invalidate];
+    
+    
+    SpaceMan.hidden = YES;
     RightRedAsteroid.hidden = YES;
     RightGreenAsteroid.hidden = YES;
     RightDiagBlueAsteroid.hidden = YES;
-    RightDiagYellowAsteroid.hidden = YES;
-    RightDiagMostPinkAsteroid.hidden = YES;
     RightDiagMostOrangeAsteroid.hidden = YES;
     TopRedAsteroid.hidden = YES;
     TopYellowAsteroid.hidden = YES;
     LeftDiagMostGreenAsteroid.hidden = YES;
-    LeftDiagMostBlueAsteroid.hidden = YES;
     LeftDiagPurpleAsteroid.hidden = YES;
-    LeftDiagDarkBlueAsteroid.hidden = YES;
     LeftPinkAsteroid.hidden = YES;
     LeftDarkBlueAsteroid.hidden = YES;
-    LeftDiagDownPurpleAsteroid.hidden = YES;
-    LeftDiagDownRedAsteroid.hidden = YES;
     LeftDiagDownMostYellowAsteroid.hidden = YES;
     LeftDiagDownMostOrangeAsteroid.hidden = YES;
     BottomBlueAsteroid.hidden = YES;
     BottomPurpleAsteroid.hidden = YES;
-    RightDiagDownMostOrangeAsteroid.hidden = YES;
-    RightDiagDownMostGreenAsteroid.hidden = YES;
     RightDiagDownDarkBlueAsteroid.hidden = YES;
     RightDiagDownPinkAsteroid.hidden = YES;
+    Exit.hidden = NO;
     
+}
+- (void)viewDidLoad {
+    RightRedAsteroid.hidden = YES;
+    RightGreenAsteroid.hidden = YES;
+    RightDiagBlueAsteroid.hidden = YES;
+    RightDiagMostOrangeAsteroid.hidden = YES;
+    TopRedAsteroid.hidden = YES;
+    TopYellowAsteroid.hidden = YES;
+    LeftDiagMostGreenAsteroid.hidden = YES;
+    LeftDiagPurpleAsteroid.hidden = YES;
+    LeftPinkAsteroid.hidden = YES;
+    LeftDarkBlueAsteroid.hidden = YES;
+    LeftDiagDownMostYellowAsteroid.hidden = YES;
+    LeftDiagDownMostOrangeAsteroid.hidden = YES;
+    BottomBlueAsteroid.hidden = YES;
+    BottomPurpleAsteroid.hidden = YES;
+    RightDiagDownDarkBlueAsteroid.hidden = YES;
+    RightDiagDownPinkAsteroid.hidden = YES;
+    Exit.hidden = YES;
+    ScoreNumber = 0;
     
     
     

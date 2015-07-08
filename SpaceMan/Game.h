@@ -12,33 +12,35 @@ int RandomRightAsteroidPosition;
 int RandomLeftAsteroidPosition;
 int RandomTopAsteroidPosition;
 int RandomBottomAsteroidPosition;
+int RandomRightDiagAsteroidPosition;
+int RandomLeftDiagAsteroidPosition;
+int RandomleftDiagDownAsteroidPosition;
+int RandomRightDiagDownAsteroidPosition;
+int ScoreNumber;
+NSInteger HighScoreNumber;
+
 
 @interface Game : UIViewController
 {
+    CGPoint startPoint;
     IBOutlet UIButton *StartGame;
+    IBOutlet UIButton *Exit;
+    IBOutlet UILabel *ScoreLabel;
     IBOutlet UIImageView *SpaceMan;
     IBOutlet UIImageView *RightRedAsteroid;
     IBOutlet UIImageView *RightGreenAsteroid;
     IBOutlet UIImageView *RightDiagBlueAsteroid;
-    IBOutlet UIImageView *RightDiagYellowAsteroid;
-    IBOutlet UIImageView *RightDiagMostPinkAsteroid;
     IBOutlet UIImageView *RightDiagMostOrangeAsteroid;
     IBOutlet UIImageView *TopRedAsteroid;
     IBOutlet UIImageView *TopYellowAsteroid;
     IBOutlet UIImageView *LeftDiagMostGreenAsteroid;
-    IBOutlet UIImageView *LeftDiagMostBlueAsteroid;
     IBOutlet UIImageView *LeftDiagPurpleAsteroid;
-    IBOutlet UIImageView *LeftDiagDarkBlueAsteroid;
     IBOutlet UIImageView *LeftPinkAsteroid;
     IBOutlet UIImageView *LeftDarkBlueAsteroid;
-    IBOutlet UIImageView *LeftDiagDownPurpleAsteroid;
-    IBOutlet UIImageView *LeftDiagDownRedAsteroid;
     IBOutlet UIImageView *LeftDiagDownMostYellowAsteroid;
     IBOutlet UIImageView *LeftDiagDownMostOrangeAsteroid;
     IBOutlet UIImageView *BottomBlueAsteroid;
     IBOutlet UIImageView *BottomPurpleAsteroid;
-    IBOutlet UIImageView *RightDiagDownMostOrangeAsteroid;
-    IBOutlet UIImageView *RightDiagDownMostGreenAsteroid;
     IBOutlet UIImageView *RightDiagDownDarkBlueAsteroid;
     IBOutlet UIImageView *RightDiagDownPinkAsteroid;
     
@@ -51,9 +53,16 @@ int RandomBottomAsteroidPosition;
     NSTimer *AsteroidTopYellowMovement;
     NSTimer *AsteroidBottomBlueMovement;
     NSTimer *AsteroidBottomPurpleMovement;
-    NSTimer *AsteroidOrangeMovement;
-    NSTimer *AsteroidPurpleMovement;
-    NSTimer *AsteroidYellowMovement;
+    NSTimer *AsteroidRightDiagOrangeMovement;
+    NSTimer *AsteroidRightDiagBlueMovement;
+    NSTimer *AsteroidLeftDiagGreenMovement;
+    NSTimer *AsteroidLeftDiagPurpleMovement;
+    NSTimer *ScoreTimer;
+    //NSTimer *AsteroidLeftDiagDownYellowMovement;
+    //NSTimer *AsteroidLeftDiagDownOrangeMovement;
+    //NSTimer *AsteroidRightDiagDownDarkBlueMovement;
+    //NSTimer *AsteroidRightDiagDownPinkMovement;
+    
     
     
 }
@@ -67,6 +76,14 @@ int RandomBottomAsteroidPosition;
 -(void)PlaceAsteroidTopYellow;
 -(void)PlaceAsteroidBottomBlue;
 -(void)PlaceAsteroidBottomPurple;
+-(void)PlaceAsteroidRightDiagOrange;
+-(void)PlaceAsteroidRightDiagBlue;
+-(void)PlaceAsteroidLeftDiagGreen;
+-(void)PlaceAsteroidLeftDiagPurple;
+/*-(void)PlaceAsteroidLeftDiagDownYellow;
+-(void)PlaceAsteroidRightDiagDownDarkBlue;*/
+
+
 -(void)AsteroidMovingLeftRed;
 -(void)AsteroidMovingLeftGreen;
 -(void)AsteroidMovingRightPink;
@@ -75,6 +92,15 @@ int RandomBottomAsteroidPosition;
 -(void)AsteroidMovingTopYellow;
 -(void)AsteroidMovingBottomBlue;
 -(void)AsteroidMovingBottomPurple;
+-(void)AsteroidMovingRightDiagOrange;
+-(void)AsteroidMovingRightDiagBlue;
+-(void)AsteroidMovingLeftDiagGreen;
+-(void)AsteroidMovingLeftDiagPurple;
+/*-(void)AsteroidMovingLeftDiagDownYellow;
+-(void)AsteroidMovingRightDiagDownDarkBlue;*/
+
+-(void)GameOver;
+-(void)Score;
 
 
 
