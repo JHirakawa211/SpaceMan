@@ -17,6 +17,19 @@ int RandomLeftDiagAsteroidPosition;
 int RandomleftDiagDownAsteroidPosition;
 int RandomRightDiagDownAsteroidPosition;
 int ScoreNumber;
+BOOL Stop;
+BOOL RRED;
+BOOL RGreen;
+BOOL DBlue;
+BOOL DOrange;
+BOOL TRed;
+BOOL TYellow;
+BOOL LPink;
+BOOL LDarkBlue;
+BOOL DGreen;
+BOOL DPurple;
+BOOL BPurple;
+BOOL BBlue;
 NSInteger HighScoreNumber;
 
 
@@ -26,6 +39,7 @@ NSInteger HighScoreNumber;
     IBOutlet UIButton *StartGame;
     IBOutlet UIButton *Exit;
     IBOutlet UILabel *ScoreLabel;
+    IBOutlet UILabel *FinalScore;
     IBOutlet UIImageView *SpaceMan;
     IBOutlet UIImageView *RightRedAsteroid;
     IBOutlet UIImageView *RightGreenAsteroid;
@@ -37,16 +51,18 @@ NSInteger HighScoreNumber;
     IBOutlet UIImageView *LeftDiagPurpleAsteroid;
     IBOutlet UIImageView *LeftPinkAsteroid;
     IBOutlet UIImageView *LeftDarkBlueAsteroid;
-    IBOutlet UIImageView *LeftDiagDownMostYellowAsteroid;
-    IBOutlet UIImageView *LeftDiagDownMostOrangeAsteroid;
     IBOutlet UIImageView *BottomBlueAsteroid;
     IBOutlet UIImageView *BottomPurpleAsteroid;
+    IBOutlet UIImageView *ScoreBox;
+    
+    //didnt use below
+    IBOutlet UIImageView *LeftDiagDownMostOrangeAsteroid;
+     IBOutlet UIImageView *RightDiagDownPinkAsteroid;
+    IBOutlet UIImageView *LeftDiagDownMostYellowAsteroid;
     IBOutlet UIImageView *RightDiagDownDarkBlueAsteroid;
-    IBOutlet UIImageView *RightDiagDownPinkAsteroid;
     
     NSTimer *AsteroidLeftRedMovement;
     NSTimer *AsteroidLeftGreenMovement;
-    NSTimer *AsteroidBlueMovement;
     NSTimer *AsteroidRightPinkMovement;
     NSTimer *AsteroidRightDarkBlueMovement;
     NSTimer *AsteroidTopRedMovement;
@@ -57,7 +73,24 @@ NSInteger HighScoreNumber;
     NSTimer *AsteroidRightDiagBlueMovement;
     NSTimer *AsteroidLeftDiagGreenMovement;
     NSTimer *AsteroidLeftDiagPurpleMovement;
+    NSTimer *FinalLeftRedMovement;
+    NSTimer *FinalLeftGreenMovement;
+    NSTimer *FinalRightPinkMovement;
+    NSTimer *FinalRightDarkBlueMovement;
+    NSTimer *FinalTopRedMovement;
+    NSTimer *FinalTopYellowMovement;
+    NSTimer *FinalBottomBlueMovement;
+    NSTimer *FinalBottomPurpleMovement;
+    NSTimer *FinalRightDiagOrangeMovement;
+    NSTimer *FinalRightDiagBlueMovement;
+    NSTimer *FinalLeftDiagGreenMovement;
+    NSTimer *FinalLeftDiagPurpleMovement;
+    NSTimer *SpaceManMovement;
     NSTimer *ScoreTimer;
+    NSTimer *ScoreBoxMovement;
+    NSTimer *ExitMovement;
+    NSTimer *ScoreMovement;
+    
     //NSTimer *AsteroidLeftDiagDownYellowMovement;
     //NSTimer *AsteroidLeftDiagDownOrangeMovement;
     //NSTimer *AsteroidRightDiagDownDarkBlueMovement;
@@ -96,8 +129,22 @@ NSInteger HighScoreNumber;
 -(void)AsteroidMovingRightDiagBlue;
 -(void)AsteroidMovingLeftDiagGreen;
 -(void)AsteroidMovingLeftDiagPurple;
+-(void)SpaceManMoving;
 /*-(void)AsteroidMovingLeftDiagDownYellow;
 -(void)AsteroidMovingRightDiagDownDarkBlue;*/
+
+-(void)FinalLeftRedMoving;
+-(void)FinalLeftGreenMoving;
+-(void)FinalRightPinkMoving;
+-(void)FinalRightDarkBlueMoving;
+-(void)FinalTopRedMoving;
+-(void)FinalTopYellowMoving;
+-(void)FinalBottomBlueMoving;
+-(void)FinalBottomPurpleMoving;
+-(void)FinalRightDiagOrangeMoving;
+-(void)FinalRightDiagBlueMoving;
+-(void)FinalLeftDiagGreenMoving;
+-(void)FinalLeftDiagPurpleMoving;
 
 -(void)GameOver;
 -(void)Score;

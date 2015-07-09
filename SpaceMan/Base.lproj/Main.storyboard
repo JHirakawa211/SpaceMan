@@ -58,6 +58,36 @@
                                 <rect key="frame" x="-9" y="-12" width="342" height="592"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scorebox" id="ims-Ef-ace">
+                                <rect key="frame" x="40" y="216" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Dgi-7Y-cqH">
+                                <rect key="frame" x="-9" y="-4" width="334" height="617"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" red="1" green="0.1103009259" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="yDS-4q-ac4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FZ4-c6-JAV">
+                                <rect key="frame" x="132" y="5" width="139" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Got:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1nL-Gv-r8G">
+                                <rect key="frame" x="80" y="237" width="200" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidbluediagnolright" id="CtL-8v-GTL">
                                 <rect key="frame" x="321" y="90" width="24" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -138,25 +168,6 @@
                                 <rect key="frame" x="-7" y="-28" width="24" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Dgi-7Y-cqH">
-                                <rect key="frame" x="-9" y="0.0" width="334" height="617"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
-                                <state key="normal" title="Exit">
-                                    <color key="titleColor" red="1" green="1" blue="0.021180555555555557" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="yDS-4q-ac4"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FZ4-c6-JAV">
-                                <rect key="frame" x="132" y="5" width="139" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -164,6 +175,7 @@
                         <outlet property="BottomBlueAsteroid" destination="DTB-8N-wwX" id="xT5-dc-9Oc"/>
                         <outlet property="BottomPurpleAsteroid" destination="ULK-wU-bi9" id="FJs-DG-0ME"/>
                         <outlet property="Exit" destination="Dgi-7Y-cqH" id="A6F-dq-fZo"/>
+                        <outlet property="FinalScore" destination="1nL-Gv-r8G" id="tdU-iZ-lG4"/>
                         <outlet property="LeftDarkBlueAsteroid" destination="VLu-Q7-Hzf" id="Coy-J1-UEx"/>
                         <outlet property="LeftDiagDownMostOrangeAsteroid" destination="b7C-dk-D7D" id="Q3h-yw-hCr"/>
                         <outlet property="LeftDiagDownMostYellowAsteroid" destination="PPF-E8-jDY" id="DhE-vT-h0c"/>
@@ -176,6 +188,7 @@
                         <outlet property="RightDiagMostOrangeAsteroid" destination="kGG-az-YZA" id="CYS-0J-pLg"/>
                         <outlet property="RightGreenAsteroid" destination="uQ0-FX-zEU" id="PQQ-cn-Abx"/>
                         <outlet property="RightRedAsteroid" destination="HUD-cG-Qby" id="xX3-Bk-U8r"/>
+                        <outlet property="ScoreBox" destination="ims-Ef-ace" id="zqw-hD-Ldb"/>
                         <outlet property="ScoreLabel" destination="FZ4-c6-JAV" id="J2p-4I-xn4"/>
                         <outlet property="SpaceMan" destination="r2O-MJ-uEA" id="lte-Pg-PJR"/>
                         <outlet property="StartGame" destination="2Z4-cS-iM1" id="ime-tp-Juf"/>
@@ -205,6 +218,7 @@
         <image name="asteroidreddown" width="388" height="739"/>
         <image name="asteroidyellowdown" width="388" height="739"/>
         <image name="asteroidyellowdownleft" width="593" height="606"/>
+        <image name="scorebox" width="570" height="362"/>
         <image name="space" width="732" height="892"/>
         <image name="spacetitle" width="596" height="842"/>
         <image name="spaceufo" width="1363" height="933"/>
