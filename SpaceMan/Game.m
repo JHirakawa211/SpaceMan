@@ -29,6 +29,7 @@
     
     if(Stop == NO){
     SpaceMan.center = CGPointMake(startPoint.x, startPoint.y);
+        
     }
 }
 //-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -58,6 +59,7 @@
     //RightDiagDownDarkBlueAsteroid.hidden = NO;
     
     StartGame.hidden = YES;
+    Instructions.hidden = YES;
     
     [self PlaceAsteroidLeftRed];
     [self PlaceAsteroidLeftGreen];
@@ -399,22 +401,7 @@
     
 }
 -(void)FinalLeftRedMoving{
-    RightGreenAsteroid.hidden = YES;
-    RightDiagBlueAsteroid.hidden = YES;
-    RightDiagMostOrangeAsteroid.hidden = YES;
-    TopRedAsteroid.hidden = YES;
-    TopYellowAsteroid.hidden = YES;
-    LeftDiagMostGreenAsteroid.hidden = YES;
-    LeftDiagPurpleAsteroid.hidden = YES;
-    LeftPinkAsteroid.hidden = YES;
-    LeftDarkBlueAsteroid.hidden = YES;
-    LeftDiagDownMostYellowAsteroid.hidden = YES;
-    LeftDiagDownMostOrangeAsteroid.hidden = YES;
-    BottomBlueAsteroid.hidden = YES;
-    BottomPurpleAsteroid.hidden = YES;
-    RightDiagDownDarkBlueAsteroid.hidden = YES;
-    RightDiagDownPinkAsteroid.hidden = YES;
-    
+    [self hidden];
     RightRedAsteroid.center = CGPointMake(RightRedAsteroid.center.x, RightRedAsteroid.center.y+1);
     
     if(RightRedAsteroid.center.y > 600){
@@ -423,21 +410,7 @@
     }
 }
 -(void)FinalLeftGreenMoving{
-    RightRedAsteroid.hidden = YES;
-    RightDiagBlueAsteroid.hidden = YES;
-    RightDiagMostOrangeAsteroid.hidden = YES;
-    TopRedAsteroid.hidden = YES;
-    TopYellowAsteroid.hidden = YES;
-    LeftDiagMostGreenAsteroid.hidden = YES;
-    LeftDiagPurpleAsteroid.hidden = YES;
-    LeftPinkAsteroid.hidden = YES;
-    LeftDarkBlueAsteroid.hidden = YES;
-    LeftDiagDownMostYellowAsteroid.hidden = YES;
-    LeftDiagDownMostOrangeAsteroid.hidden = YES;
-    BottomBlueAsteroid.hidden = YES;
-    BottomPurpleAsteroid.hidden = YES;
-    RightDiagDownDarkBlueAsteroid.hidden = YES;
-    RightDiagDownPinkAsteroid.hidden = YES;
+    [self hidden];
     
     RightGreenAsteroid.center = CGPointMake(RightGreenAsteroid.center.x, RightGreenAsteroid.center.y+1);
     
@@ -447,21 +420,7 @@
     }
 }
 -(void)FinalRightPinkMoving{
-    RightRedAsteroid.hidden = YES;
-    RightGreenAsteroid.hidden = YES;
-    RightDiagBlueAsteroid.hidden = YES;
-    RightDiagMostOrangeAsteroid.hidden = YES;
-    TopRedAsteroid.hidden = YES;
-    TopYellowAsteroid.hidden = YES;
-    LeftDiagMostGreenAsteroid.hidden = YES;
-    LeftDiagPurpleAsteroid.hidden = YES;
-    LeftDarkBlueAsteroid.hidden = YES;
-    LeftDiagDownMostYellowAsteroid.hidden = YES;
-    LeftDiagDownMostOrangeAsteroid.hidden = YES;
-    BottomBlueAsteroid.hidden = YES;
-    BottomPurpleAsteroid.hidden = YES;
-    RightDiagDownDarkBlueAsteroid.hidden = YES;
-    RightDiagDownPinkAsteroid.hidden = YES;
+    [self hidden];
     
     LeftPinkAsteroid.center = CGPointMake(LeftPinkAsteroid.center.x, LeftPinkAsteroid.center.y+1);
     
@@ -471,21 +430,7 @@
     }
 }
 -(void)FinalRightDarkBlueMoving{
-    RightRedAsteroid.hidden = YES;
-    RightGreenAsteroid.hidden = YES;
-    RightDiagBlueAsteroid.hidden = YES;
-    RightDiagMostOrangeAsteroid.hidden = YES;
-    TopRedAsteroid.hidden = YES;
-    TopYellowAsteroid.hidden = YES;
-    LeftDiagMostGreenAsteroid.hidden = YES;
-    LeftDiagPurpleAsteroid.hidden = YES;
-    LeftPinkAsteroid.hidden = YES;
-    LeftDiagDownMostYellowAsteroid.hidden = YES;
-    LeftDiagDownMostOrangeAsteroid.hidden = YES;
-    BottomBlueAsteroid.hidden = YES;
-    BottomPurpleAsteroid.hidden = YES;
-    RightDiagDownDarkBlueAsteroid.hidden = YES;
-    RightDiagDownPinkAsteroid.hidden = YES;
+    [self hidden];
     
     LeftDarkBlueAsteroid.center = CGPointMake(LeftDarkBlueAsteroid.center.x, LeftDarkBlueAsteroid.center.y+1);
     
@@ -495,21 +440,7 @@
     }
 }
 -(void)FinalTopRedMoving{
-    RightRedAsteroid.hidden = YES;
-    RightGreenAsteroid.hidden = YES;
-    RightDiagBlueAsteroid.hidden = YES;
-    RightDiagMostOrangeAsteroid.hidden = YES;
-    TopYellowAsteroid.hidden = YES;
-    LeftDiagMostGreenAsteroid.hidden = YES;
-    LeftDiagPurpleAsteroid.hidden = YES;
-    LeftPinkAsteroid.hidden = YES;
-    LeftDarkBlueAsteroid.hidden = YES;
-    LeftDiagDownMostYellowAsteroid.hidden = YES;
-    LeftDiagDownMostOrangeAsteroid.hidden = YES;
-    BottomBlueAsteroid.hidden = YES;
-    BottomPurpleAsteroid.hidden = YES;
-    RightDiagDownDarkBlueAsteroid.hidden = YES;
-    RightDiagDownPinkAsteroid.hidden = YES;
+    [self hidden];
     
     TopRedAsteroid.center = CGPointMake(TopRedAsteroid.center.x, TopRedAsteroid.center.y+1);
     
@@ -519,21 +450,7 @@
     }
 }
 -(void)FinalTopYellowMoving{
-    RightRedAsteroid.hidden = YES;
-    RightGreenAsteroid.hidden = YES;
-    RightDiagBlueAsteroid.hidden = YES;
-    RightDiagMostOrangeAsteroid.hidden = YES;
-    TopRedAsteroid.hidden = YES;
-    LeftDiagMostGreenAsteroid.hidden = YES;
-    LeftDiagPurpleAsteroid.hidden = YES;
-    LeftPinkAsteroid.hidden = YES;
-    LeftDarkBlueAsteroid.hidden = YES;
-    LeftDiagDownMostYellowAsteroid.hidden = YES;
-    LeftDiagDownMostOrangeAsteroid.hidden = YES;
-    BottomBlueAsteroid.hidden = YES;
-    BottomPurpleAsteroid.hidden = YES;
-    RightDiagDownDarkBlueAsteroid.hidden = YES;
-    RightDiagDownPinkAsteroid.hidden = YES;
+    [self hidden];
     
     TopYellowAsteroid.center = CGPointMake(TopYellowAsteroid.center.x, TopYellowAsteroid.center.y+1);
     
@@ -543,21 +460,7 @@
     }
 }
 -(void)FinalBottomBlueMoving{
-    RightRedAsteroid.hidden = YES;
-    RightGreenAsteroid.hidden = YES;
-    RightDiagBlueAsteroid.hidden = YES;
-    RightDiagMostOrangeAsteroid.hidden = YES;
-    TopRedAsteroid.hidden = YES;
-    TopYellowAsteroid.hidden = YES;
-    LeftDiagMostGreenAsteroid.hidden = YES;
-    LeftDiagPurpleAsteroid.hidden = YES;
-    LeftPinkAsteroid.hidden = YES;
-    LeftDarkBlueAsteroid.hidden = YES;
-    LeftDiagDownMostYellowAsteroid.hidden = YES;
-    LeftDiagDownMostOrangeAsteroid.hidden = YES;
-    BottomPurpleAsteroid.hidden = YES;
-    RightDiagDownDarkBlueAsteroid.hidden = YES;
-    RightDiagDownPinkAsteroid.hidden = YES;
+    [self hidden];
     
     BottomBlueAsteroid.center = CGPointMake(BottomBlueAsteroid.center.x, BottomBlueAsteroid.center.y+1);
     
@@ -567,21 +470,7 @@
     }
 }
 -(void)FinalBottomPurpleMoving{
-    RightRedAsteroid.hidden = YES;
-    RightGreenAsteroid.hidden = YES;
-    RightDiagBlueAsteroid.hidden = YES;
-    RightDiagMostOrangeAsteroid.hidden = YES;
-    TopRedAsteroid.hidden = YES;
-    TopYellowAsteroid.hidden = YES;
-    LeftDiagMostGreenAsteroid.hidden = YES;
-    LeftDiagPurpleAsteroid.hidden = YES;
-    LeftPinkAsteroid.hidden = YES;
-    LeftDarkBlueAsteroid.hidden = YES;
-    LeftDiagDownMostYellowAsteroid.hidden = YES;
-    LeftDiagDownMostOrangeAsteroid.hidden = YES;
-    BottomBlueAsteroid.hidden = YES;
-    RightDiagDownDarkBlueAsteroid.hidden = YES;
-    RightDiagDownPinkAsteroid.hidden = YES;
+    [self hidden];
     
     BottomPurpleAsteroid.center = CGPointMake(BottomPurpleAsteroid.center.x, BottomPurpleAsteroid.center.y+1);
     
@@ -591,21 +480,7 @@
     }
 }
 -(void)FinalRightDiagOrangeMoving{
-    RightRedAsteroid.hidden = YES;
-    RightGreenAsteroid.hidden = YES;
-    RightDiagBlueAsteroid.hidden = YES;
-    TopRedAsteroid.hidden = YES;
-    TopYellowAsteroid.hidden = YES;
-    LeftDiagMostGreenAsteroid.hidden = YES;
-    LeftDiagPurpleAsteroid.hidden = YES;
-    LeftPinkAsteroid.hidden = YES;
-    LeftDarkBlueAsteroid.hidden = YES;
-    LeftDiagDownMostYellowAsteroid.hidden = YES;
-    LeftDiagDownMostOrangeAsteroid.hidden = YES;
-    BottomBlueAsteroid.hidden = YES;
-    BottomPurpleAsteroid.hidden = YES;
-    RightDiagDownDarkBlueAsteroid.hidden = YES;
-    RightDiagDownPinkAsteroid.hidden = YES;
+    [self hidden];
     
     RightDiagMostOrangeAsteroid.center = CGPointMake(RightDiagMostOrangeAsteroid.center.x, RightDiagMostOrangeAsteroid.center.y+1);
     
@@ -615,21 +490,7 @@
     }
 }
 -(void)FinalRightDiagBlueMoving{
-    RightRedAsteroid.hidden = YES;
-    RightGreenAsteroid.hidden = YES;
-    RightDiagMostOrangeAsteroid.hidden = YES;
-    TopRedAsteroid.hidden = YES;
-    TopYellowAsteroid.hidden = YES;
-    LeftDiagMostGreenAsteroid.hidden = YES;
-    LeftDiagPurpleAsteroid.hidden = YES;
-    LeftPinkAsteroid.hidden = YES;
-    LeftDarkBlueAsteroid.hidden = YES;
-    LeftDiagDownMostYellowAsteroid.hidden = YES;
-    LeftDiagDownMostOrangeAsteroid.hidden = YES;
-    BottomBlueAsteroid.hidden = YES;
-    BottomPurpleAsteroid.hidden = YES;
-    RightDiagDownDarkBlueAsteroid.hidden = YES;
-    RightDiagDownPinkAsteroid.hidden = YES;
+    [self hidden];
     
     RightDiagBlueAsteroid.center = CGPointMake(RightDiagBlueAsteroid.center.x, RightDiagBlueAsteroid.center.y+1);
     
@@ -639,21 +500,7 @@
     }
 }
 -(void)FinalLeftDiagGreenMoving{
-    RightRedAsteroid.hidden = YES;
-    RightGreenAsteroid.hidden = YES;
-    RightDiagMostOrangeAsteroid.hidden = YES;
-    RightDiagBlueAsteroid.hidden = YES;
-    TopRedAsteroid.hidden = YES;
-    TopYellowAsteroid.hidden = YES;
-    LeftDiagPurpleAsteroid.hidden = YES;
-    LeftPinkAsteroid.hidden = YES;
-    LeftDarkBlueAsteroid.hidden = YES;
-    LeftDiagDownMostYellowAsteroid.hidden = YES;
-    LeftDiagDownMostOrangeAsteroid.hidden = YES;
-    BottomBlueAsteroid.hidden = YES;
-    BottomPurpleAsteroid.hidden = YES;
-    RightDiagDownDarkBlueAsteroid.hidden = YES;
-    RightDiagDownPinkAsteroid.hidden = YES;
+    [self hidden];
     
     LeftDiagMostGreenAsteroid.center = CGPointMake(LeftDiagMostGreenAsteroid.center.x, LeftDiagMostGreenAsteroid.center.y+1);
     
@@ -663,21 +510,7 @@
     }
 }
 -(void)FinalLeftDiagPurpleMoving{
-    RightRedAsteroid.hidden = YES;
-    RightGreenAsteroid.hidden = YES;
-    RightDiagMostOrangeAsteroid.hidden = YES;
-    RightDiagBlueAsteroid.hidden = YES;
-    TopRedAsteroid.hidden = YES;
-    TopYellowAsteroid.hidden = YES;
-    LeftDiagMostGreenAsteroid.hidden = YES;
-    LeftPinkAsteroid.hidden = YES;
-    LeftDarkBlueAsteroid.hidden = YES;
-    LeftDiagDownMostYellowAsteroid.hidden = YES;
-    LeftDiagDownMostOrangeAsteroid.hidden = YES;
-    BottomBlueAsteroid.hidden = YES;
-    BottomPurpleAsteroid.hidden = YES;
-    RightDiagDownDarkBlueAsteroid.hidden = YES;
-    RightDiagDownPinkAsteroid.hidden = YES;
+    [self hidden];
     
     LeftDiagPurpleAsteroid.center = CGPointMake(LeftDiagPurpleAsteroid.center.x, LeftDiagPurpleAsteroid.center.y+1);
     
@@ -686,6 +519,45 @@
         LeftDiagPurpleAsteroid.hidden = YES;
     }
 
+}
+-(void)hidden{
+    
+    if(RRED == NO){
+        RightRedAsteroid.hidden = YES;
+    }
+    if(RGreen == NO){
+        RightGreenAsteroid.hidden = YES;
+    }
+    if(LPink == NO){
+        LeftPinkAsteroid.hidden = YES;
+    }
+    if(LDarkBlue == NO){
+        LeftDarkBlueAsteroid.hidden = YES;
+    }
+    if(TRed == NO){
+        TopRedAsteroid.hidden = YES;
+    }
+    if(TYellow == NO){
+        TopYellowAsteroid.hidden = YES;
+    }
+    if(BBlue == NO){
+        BottomBlueAsteroid.hidden = YES;
+    }
+    if(BPurple == NO){
+        BottomPurpleAsteroid.hidden = YES;
+    }
+    if(DOrange == NO){
+        RightDiagMostOrangeAsteroid.hidden = YES;
+    }
+    if(DBlue == NO){
+        RightDiagBlueAsteroid.hidden = YES;
+    }
+    if(DGreen == NO){
+        LeftDiagMostGreenAsteroid.hidden = YES;
+    }
+    if(DPurple == NO){
+        LeftDiagPurpleAsteroid.hidden = YES;
+    }
 }
 
 -(void)GameOver{
@@ -803,7 +675,6 @@
     DPurple = NO;
     BPurple = NO;
     BBlue = NO;
-   
 
     
         

@@ -63,7 +63,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Dgi-7Y-cqH">
-                                <rect key="frame" x="-9" y="-4" width="334" height="617"/>
+                                <rect key="frame" x="-8" y="0.0" width="334" height="617"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
                                 <state key="normal" title="Exit">
@@ -136,18 +136,6 @@
                                 <rect key="frame" x="-41" y="340" width="38" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2Z4-cS-iM1">
-                                <rect key="frame" x="4" y="43" width="308" height="589"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Start Game">
-                                    <color key="titleColor" red="1" green="0.1103009259" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="StartGame:" destination="zzG-pm-GJY" eventType="touchUpInside" id="uS7-xe-sfd"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroidorangeleftdowndiag" id="b7C-dk-D7D">
                                 <rect key="frame" x="6" y="568" width="35" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -168,6 +156,25 @@
                                 <rect key="frame" x="-7" y="-28" width="24" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold and Drag UFO and Evade the Asteroids" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w2e-Op-wxc">
+                                <rect key="frame" x="7" y="360" width="306" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.1103009259" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2Z4-cS-iM1">
+                                <rect key="frame" x="4" y="39" width="308" height="589"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Tap to Start Game">
+                                    <color key="titleColor" red="1" green="0.1103009259" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartGame:" destination="zzG-pm-GJY" eventType="touchUpInside" id="vRx-Rq-pxa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -176,6 +183,7 @@
                         <outlet property="BottomPurpleAsteroid" destination="ULK-wU-bi9" id="FJs-DG-0ME"/>
                         <outlet property="Exit" destination="Dgi-7Y-cqH" id="A6F-dq-fZo"/>
                         <outlet property="FinalScore" destination="1nL-Gv-r8G" id="tdU-iZ-lG4"/>
+                        <outlet property="Instructions" destination="w2e-Op-wxc" id="cSE-cF-zPN"/>
                         <outlet property="LeftDarkBlueAsteroid" destination="VLu-Q7-Hzf" id="Coy-J1-UEx"/>
                         <outlet property="LeftDiagDownMostOrangeAsteroid" destination="b7C-dk-D7D" id="Q3h-yw-hCr"/>
                         <outlet property="LeftDiagDownMostYellowAsteroid" destination="PPF-E8-jDY" id="DhE-vT-h0c"/>

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>4782F334-20A1-4C2F-B900-731BDD867156</string>
 	<key>IDESourceControlProjectName</key>
-	<string>SpaceMan</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>641334DC2CE8268FD7C91FFD628397541894BCF0</key>
 		<string>https://github.com/JHirakawa211/SpaceMan.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SpaceMan.xcodeproj</string>
+	<string>SpaceMan.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>641334DC2CE8268FD7C91FFD628397541894BCF0</key>

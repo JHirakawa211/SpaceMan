@@ -40,6 +40,7 @@ NSInteger HighScoreNumber;
     IBOutlet UIButton *Exit;
     IBOutlet UILabel *ScoreLabel;
     IBOutlet UILabel *FinalScore;
+    IBOutlet UILabel *Instructions;
     IBOutlet UIImageView *SpaceMan;
     IBOutlet UIImageView *RightRedAsteroid;
     IBOutlet UIImageView *RightGreenAsteroid;
@@ -148,6 +149,7 @@ NSInteger HighScoreNumber;
 
 -(void)GameOver;
 -(void)Score;
+-(void)hidden;
 
 
 
